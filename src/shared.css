@@ -1,0 +1,75 @@
+.container {
+  width: 100%;
+}
+
+.fullWidthAndHeightContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.cellAppIcon {
+  align-items: baseline;
+  flex-shrink: initial;
+}
+
+.selectableCellButton {
+  & label {
+    &:before,
+    &:after {
+      content: none;
+    }
+
+    & input {
+      margin: 0;
+    }
+
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
+
+/* disable styles for visited links created by react-router-dom Link */
+.linkButton,
+.linkButton:visited,
+.linkButton:hover,
+.linkButton:active {
+  color: inherit;
+}
+
+.endOfRecord {
+  text-align: left;
+}
+
+.checkbox {
+  &:disabled {
+    margin: 0;
+  }
+}
+
+.cellLink {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+  color: inherit !important;
+}
+
+.modifyActionContainer {
+  display: inline-flex;
+  align-items: center;
+}
+
+.modifyActionIcon {
+  width: 14px;
+  min-width: 14px;
+  height: 14px;
+}
+
+.modifyActionIconLabel {
+  margin: 0 0 0 0.35em;
+}

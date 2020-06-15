@@ -1,0 +1,7 @@
+@import "@folio/stripes-components/lib/variables.css";
+
+.checkBoxLabel {
+  margin: 0;
+  line-height: 1.5;
+  cursor: default;
+}

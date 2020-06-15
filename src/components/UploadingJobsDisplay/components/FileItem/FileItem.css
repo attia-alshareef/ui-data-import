@@ -1,0 +1,84 @@
+@import "@folio/stripes-components/lib/variables.css";
+
+.fileItem {
+  position: relative;
+  margin-bottom: 0.7rem;
+  padding: 0.5rem 35px 0.5rem 0.5rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.fileItemDanger {
+  padding-right: 60px;
+  border-color: var(--danger);
+  background-color: color(var(--error) alpha(-90%));
+}
+
+.fileItemUploading {
+  padding-right: 0.5rem;
+}
+
+.fileItemFailed {
+  color: var(--danger);
+}
+
+.fileItemHeader {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.fileIcon {
+  position: absolute;
+}
+
+.fileItemHeaderContent {
+  word-break: break-word;
+}
+
+.fileItemUploadedHeaderContent {
+  color: var(--color-text-p2);
+}
+
+.fileItemHeaderName {
+  margin-right: 2rem;
+  text-indent: 18px;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+}
+
+.undoIcon {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.progressWrapper {
+  width: 100%;
+  height: 10px;
+  margin: 0.5rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.progressInfo {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  color: var(--color-text-p2);
+}
+
+.progressMessage {
+  margin-top: 0.5rem;
+}

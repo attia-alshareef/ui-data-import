@@ -1,0 +1,149 @@
+@import "@folio/stripes-components/lib/variables.css";
+
+:root {
+  --cell-padding: 1rem;
+  --selected-line-margin: calc(var(--cell-padding) / 2);
+  --selected-line-border-width: 2px;
+}
+
+:export {
+  cellPadding: var(--cell-padding);
+  selectedLineBorderWidth: var(--selected-line-border-width);
+}
+
+.container {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-fill);
+}
+
+.chooseRecordContainer {
+  padding: 1rem 3rem;
+}
+
+.message {
+  color: var(--color-text-p2);
+  text-align: center;
+}
+
+.treeViewLTR {
+  padding-right: 20px;
+}
+
+.treeViewRTL {
+  padding-left: 20px;
+}
+
+.item {
+  overflow: hidden;
+  outline: none;
+  border-radius: .5rem;
+  padding: .5rem;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 700;
+}
+
+.clickableItem {
+  cursor: pointer;
+}
+
+.clickableItem:hover {
+  background-color: color(var(--primary) whiteness(30%))
+}
+
+.headingCell {
+  composes: display-flex centerContent from "@folio/stripes-components/lib/Layout/Layout.css";
+  border-bottom: 1px solid var(--color-border);
+  padding: .5rem;
+}
+
+.cell {
+  position: relative;
+  width: 100%;
+  padding: var(--cell-padding);
+
+  & > :first-child {
+    width: inherit;
+  }
+}
+
+.borderLeft {
+  border-left: 1px solid var(--color-border);
+}
+
+.borderRight {
+  border-right: 1px solid var(--color-border);
+}
+
+.contentContainer {
+  position: relative;
+  flex-wrap: nowrap;
+
+  & [class|=overlay] {transform: translate3d(0, 39px, 0px)!important;}
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+}
+
+.selectedLine {
+  composes: display-flex justify-end from "@folio/stripes-components/lib/Layout/Layout.css";
+  position: absolute;
+  left: var(--selected-line-margin);
+  right: var(--selected-line-margin);
+  transform: translate(0, var(--selected-line-margin));
+  border: var(--selected-line-border-width) solid #3986c5;
+  border-radius: .5rem;
+  background-color: rgba(197, 218, 244, 0.6);
+  pointer-events: none;
+}
+
+.hint {
+  composes: display-flex flex-align-items-center centerContent textCentered from "@folio/stripes-components/lib/Layout/Layout.css";
+  pointer-events: all !important;
+}
+
+.hintMessage {
+  pointer-events: all !important;
+  padding: 4px 8px;
+  background-color: #616161;
+  border-radius: .5rem;
+  color: #fff;
+  margin: 4px;
+  white-space: pre-line;
+  align-self: stretch;
+}
+
+.incomingRecord {
+  composes: display-flex flex-align-items-center from "@folio/stripes-components/lib/Layout/Layout.css";
+  width: 100%;
+  line-height: .9;
+  white-space: normal;
+
+  & > :first-child {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &:focus::before {
+    border: none;
+  }
+}
+
+.compare {
+  composes: display-flex flex-align-items-center from "@folio/stripes-components/lib/Layout/Layout.css";
+  position: absolute;
+  top: 9px;
+  transform: translate(50%);
+}
+
+.compareMessage {
+  padding: 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
